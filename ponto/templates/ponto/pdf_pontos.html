@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+            margin-bottom: 40px;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            margin-top: 40px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Histórico de Registros </h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>CPF</th>
+                <th>Nome</th>
+                <th>Data</th>
+                <th>Entrada</th>
+                <th>Contrato</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+            <tr>
+                <td>{{ registro.colaborador.cpf }}</td>
+                <td>{{ registro.colaborador.nome }}</td>
+                <td>{{ registro.data|date:"d/m/Y" }}</td>
+                <td>{{ registro.entrada|time:"H:i"|default:"---" }}</td>
+                <td>{{ registro.lider_nome|default:"---" }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">Nenhum registro encontrado.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p><strong>Desenvolvido por:</strong> Thayron Higlânder - Back-end | Francisco Araújo - Front-end.</p>
+</body>
+</html>

@@ -1,0 +1,806 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #ffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #aeb6bb;
+}
+
+h3 img {
+  vertical-align: middle;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* Login */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header .logo {
+  width: 90%;
+  margin-bottom: 0.1rem;
+}
+
+.login-header h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.login-header p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login-form label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-form input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.login-form button {
+  padding: 0.9rem;
+  background-color: #0077cc;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #005fa3;
+}
+
+.login-footer {
+  display: flex;
+  margin-top: 1.5rem;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #777;
+  align-items: center;
+}
+
+/* Registro */
+.ponto-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.topo .logo {
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.topo h1 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.relogio {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.ponto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ponto-form label {
+  font-size: 0.9rem;
+  color: #444;
+  text-align: left;
+}
+
+.ponto-form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.ponto-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ponto-form button:hover {
+  background-color: #005fa3;
+}
+
+.mensagem {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.mensagem.sucesso {
+  color: #2e7d32;
+}
+
+.mensagem.erro {
+  color: #c62828;
+}
+
+/* Gerente */
+.gerente-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* espaço entre form e tabela */
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 0rem 3rem;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: #5d6d7e;
+  min-width: 180px;
+  position: relative;
+}
+
+.input-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.input-group input[type="date"],
+.input-group input[type="text"] {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1.8px solid #bdc3c7;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
+}
+
+/* Ícone lupa */
+.search-group {
+  position: relative;
+}
+
+.search-group .icon {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  color: #7f8c8d;
+  pointer-events: none;
+  font-size: 1.1rem;
+}
+
+/* Botões */
+.btn {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  min-width: 130px;
+}
+
+.btn.primary {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background-color: #1f6391;
+}
+
+.btn.secondary {
+  background-color: #bdc3c7;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn.secondary:hover {
+  background-color: #aab7c4;
+}
+
+/* Tabela */
+.tabela-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 850px;
+}
+
+thead {
+  background-color: #2980b9;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(41, 128, 185, 0.3);
+}
+
+thead th {
+  padding: 1rem 1.2rem;
+  text-align: left;
+  font-weight: 700;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+thead th:last-child {
+  border-right: none;
+  border-top-right-radius: 12px;
+}
+
+tbody td {
+  padding: 0.6rem 1.2rem;
+  border-bottom: 1px solid #ecf0f1;
+  color: #34495e;
+  font-weight: 500;
+  border-right: 1px solid #ecf0f1;
+}
+
+tbody td:last-child {
+  border-right: none;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(even) {
+  background-color: #f7f9fc;
+  border-radius: 6px;
+}
+
+/* Hover na linha */
+tbody tr:hover {
+  background-color: #d6e6fb;
+  cursor: default;
+  transition: background-color 0.25s ease;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .filtros {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input-group,
+  .btn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  table {
+    min-width: 100%;
+  }
+}
+
+/* Footer */
+main {
+  flex: 1;
+}
+
+.footer {
+  padding: 0rem 1rem;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  text-align: center;
+  border-top: 3px solid #0077cc;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer strong {
+  color: #ffffff;
+}
+
+.texto-mobile {
+  display: none;
+}
+
+form {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px; /* Espaço entre formulário e tabela */
+}
+.container-consultar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* espaçamento entre form, h3 e tabela */
+  width: 100%;
+  max-width: 1200px; /* ou o máximo que quiser */
+  margin: 0 auto; /* centralizar na página */
+}
+.gerente-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.gerente-container form label {
+  font-weight: 600;
+  color: #34495e;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.gerente-container form input[type="text"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1.8px solid #bdc3c7;
+  border-radius: 8px;
+  /* flex: 1; */
+  width: 220px;
+  transition: border-color 0.3s ease;
+}
+
+.gerente-container form input[type="text"]:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.2);
+}
+
+/* Botão Buscar */
+.gerente-container form button[type="submit"] {
+  background-color: #2980b9;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 42px;
+}
+
+.gerente-container form button[type="submit"]:hover {
+  background-color: #1f6391;
+}
+
+/* Botão Limpar */
+.gerente-container form a {
+  display: inline-block;
+  background-color: #bdc3c7;
+  color: #2c3e50;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 42px;
+}
+
+.gerente-container form a:hover {
+  background-color: #aab7c4;
+}
+
+/*paginação */
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.paginacao a.page-link,
+.paginacao span.page-current,
+.paginacao span.page-disabled {
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.paginacao a.page-link {
+  background-color: #f8f9fa;
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.paginacao a.page-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.paginacao span.page-current {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  cursor: default;
+}
+
+.paginacao span.page-disabled {
+  color: #999;
+  border-color: #ccc;
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+/* lider */
+.dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0px 25px 10px 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  width: 170px;
+  max-width: 300px;
+  margin-bottom: 0px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+}
+
+.dropdown:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.dropdown {
+  height: 42px;
+  padding: 8px 12px;
+  font-size: 16px;
+  /* text-align: center; */
+  margin-top: 10px;
+  line-height: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  appearance: none; /* Remove estilo nativo do navegador */
+}
+
+/* .data{
+  width: 170px;
+} */
+
+label {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+/* Media Queries para Mobile */
+
+@media (max-width: 600px) {
+  /* Ajusta padding e centraliza main */
+  main {
+    padding: 1rem;
+  }
+
+  /* Containers principais ficam full width com margens internas */
+  .login-container,
+  .ponto-container,
+  .gerente-container {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Formulários e inputs ficam full width */
+  .login-form,
+  .ponto-form,
+  .gerente-container form {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: initial;
+  }
+
+  .login-form input,
+  .ponto-form input,
+  .gerente-container form input[type="text"],
+  .gerente-container form input[type="date"],
+  .gerente-container form select,
+  .dropdown {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* Botões full width para facilitar clique */
+  .login-form button,
+  .ponto-form button,
+  .gerente-container form button[type="submit"],
+  .gerente-container form a {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.9rem;
+    text-align: center;
+  }
+
+  /* Ajusta o header e logo */
+  .topo .logo {
+    width: 150px;
+  }
+
+  /* Ajusta texto e tamanho das fontes para melhor leitura */
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .login-header h1 {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+
+  /* Reduz o tamanho da tabela, deixa rolável */
+  table {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  /* Para o container da tabela e tabela, garantir scroll horizontal suave */
+  .tabela-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* rolamento suave no iOS */
+  }
+
+  /* Ajusta a área de filtros para empilhar em mobile */
+  .filtros {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Remove largura fixa e aumenta gap dos inputs no form gerente */
+  .gerente-container form input[type="text"],
+  .gerente-container form select,
+  .dropdown {
+    width: 100%;
+  }
+
+  /* Ícone lupa precisa ajustar para ficar visível e alinhado */
+  .search-group .icon {
+    top: 36px;
+    right: 16px;
+    font-size: 1.2rem;
+  }
+  /* Ajusta o espaçamento entre os botões no form gerente */
+  .footer {
+    padding: 0.2rem;
+    font-size: 0.9rem;
+  }
+  .texto-desktop {
+    display: none;
+  }
+
+  .texto-mobile {
+    display: block;
+  }
+
+  .footer p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .footer strong {
+    color: #ffffff;
+  }
+}
+
+/* Pequena melhoria no hover para botões em mobile */
+@media (hover: none) {
+  .login-form button:hover,
+  .ponto-form button:hover,
+  .btn.primary:hover,
+  .btn.secondary:hover,
+  .gerente-container form button[type="submit"]:hover,
+  .gerente-container form a:hover {
+    background-color: inherit;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h3 {
+  margin-top: 0;
+}
+
+.popup-content button {
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: #0056b3;
+}
+
+.teste {
+  color: white;
+  background-color: #005fa3;
+  padding: 15px 20px;
+}
+
+/* Linha principal do header */
+.teste .topo-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* garante que o título esteja no centro */
+  position: relative;
+}
+
+/* Imagem + Bem-vindo no canto esquerdo */
+.teste .bem-vindo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  left: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.teste .bem-vindo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+/* Título central */
+.teste h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* Navegação no canto direito */
+.navegacao {
+  position: absolute;
+  right: 20px;
+}
+
+.navegacao .lista {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navegacao a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navegacao a:hover {
+  color: rgb(255, 187, 0);
+  text-decoration: underline;
+}
