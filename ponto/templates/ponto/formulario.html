@@ -60,10 +60,13 @@
             </div>
 
             {% if colaborador %}
-                <button type="submit" name="gerar_etiqueta" class="btn btn-primary btn-etiqueta">
+                <a href="/etiqueta/?nome={{ colaborador.nome|urlencode }}&cpf={{ colaborador.cpf|urlencode }}" 
+                    target="_blank" 
+                    class="btn btn-primary btn-etiqueta">
                     ETIQUETA
-                </button>
+                </a>
             {% endif %}
+
         </form>
     </div>
 </div>
